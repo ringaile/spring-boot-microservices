@@ -1,17 +1,18 @@
-package com.example.microservice.springcloudconfigserver;
+package com.example.microservice.netflixeurekanamingserver;
 
 import brave.sampler.Sampler;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.config.server.EnableConfigServer;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 import org.springframework.context.annotation.Bean;
 
-@EnableConfigServer
 @SpringBootApplication
-public class SpringCloudConfigServerApplication {
+@EnableEurekaServer
+
+public class NetflixEurekaNamingServerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringCloudConfigServerApplication.class, args);
+		SpringApplication.run(NetflixEurekaNamingServerApplication.class, args);
 	}
 
 	@Bean

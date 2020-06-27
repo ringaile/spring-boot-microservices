@@ -1,19 +1,19 @@
-package com.example.microservice.limitsservice;
+package com.example.microservice.netflixzuulapigatewayserver;
 
 import brave.sampler.Sampler;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.netflix.hystrix.EnableHystrix;
+import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.Bean;
 
-@SpringBootApplication
+@EnableZuulProxy
 @EnableDiscoveryClient
-@EnableHystrix
-public class LimitsServiceApplication {
+@SpringBootApplication
+public class NetflixZuulApiGatewayServerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(LimitsServiceApplication.class, args);
+		SpringApplication.run(NetflixZuulApiGatewayServerApplication.class, args);
 	}
 
 	@Bean

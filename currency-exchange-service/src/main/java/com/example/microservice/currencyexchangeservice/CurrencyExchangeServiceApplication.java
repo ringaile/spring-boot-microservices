@@ -1,17 +1,17 @@
-package com.example.microservice.springcloudconfigserver;
+package com.example.microservice.currencyexchangeservice;
 
 import brave.sampler.Sampler;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.config.server.EnableConfigServer;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.Bean;
 
-@EnableConfigServer
 @SpringBootApplication
-public class SpringCloudConfigServerApplication {
+@EnableDiscoveryClient
+public class CurrencyExchangeServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringCloudConfigServerApplication.class, args);
+		SpringApplication.run(CurrencyExchangeServiceApplication.class, args);
 	}
 
 	@Bean
